@@ -97,7 +97,7 @@ export default function Contact() {
                   <p className="mt-3 text-lg leading-6 text-gray-500">
                     Send your feedback, or send your custom requests.
                     <br />
-                    Either way,we'd love to hear more from you.
+                    Either way, I'd love to hear more from you.
                   </p>
                   <div className="mt-8 text-base text-gray-500">
                     <div>
