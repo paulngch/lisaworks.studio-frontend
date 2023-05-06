@@ -5,7 +5,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Formik, Field, Form } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import SubmitSuccess from "../components/modals/SubmitSucces";
+import SubmitSuccess from "../components/modals/SubmitSucces.js";
 // import { XMarkIcon } from "@heroicons/react/20/solid";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { AxiosError } from "axios";

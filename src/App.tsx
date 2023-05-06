@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import SharedLayout from "./pages/SharedLayout";
-import Album from "./pages/Album";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home.js";
+import SharedLayout from "./pages/SharedLayout.js";
+import Album from "./pages/Album.js";
+import Contact from "./pages/Contact.js";
 
 function App() {
   //Prevents ALL Right-clicks on the site to prevent right-click saving of images

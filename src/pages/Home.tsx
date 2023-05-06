@@ -1,6 +1,6 @@
-import CableCards from "../components/home/CableCards";
-import FeaturedMsg from "../components/home/FeaturedMsg";
-import Hero from "../components/home/Hero";
+import CableCards from "../components/home/CableCards.js";
+import FeaturedMsg from "../components/home/FeaturedMsg.js";
+import Hero from "../components/home/Hero.js";
 
 const Home = () => {
   return (
