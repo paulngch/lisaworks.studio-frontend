@@ -2,7 +2,7 @@ const Hero = () => {
   //
   return (
     <>
-      <div className="bg-[url('/forestbg.jpg')] bg-top">
+      <div className="bg-[url('/forestbg-sm2.jpg')] sm:bg-[url('/forestbg-sm3.jpg')] lg:bg-[url('/forestbg.jpg')] bg-top">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -19,8 +19,6 @@ const Hero = () => {
                 Cables, Tailored
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-900">
-                {/* Creating nothing less than the best.
-                <br/> */}
                 Biased towards pink, sometimes, all the time.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
