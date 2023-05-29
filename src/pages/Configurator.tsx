@@ -20,7 +20,6 @@ const Configurator = () => {
         <div className="absolute">
           <NavyParacord fill="#9D174D" />
         </div>
-        {/* <img className="h-8 w-auto" src="/LisaWorksLogoFilledIn.png" alt="" /> */}
       </div>
     </>
   );
