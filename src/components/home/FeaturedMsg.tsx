@@ -30,10 +30,10 @@ const FeaturedMsg = () => {
                 least you have a really nice setup.
               </p>
               <a
-                href="#"
+                href="/pages/album"
                 className="mt-8 block w-full rounded-md border border-transparent bg-pink-400 px-8 py-3 text-base font-medium text-gray-900 hover:bg-pink-300 sm:w-auto"
               >
-                Shop Workspace
+                Past Commissions
               </a>
             </div>
           </div>

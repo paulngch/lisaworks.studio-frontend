@@ -4,3 +4,11 @@
   padding: 0rem;
   text-align: center;
 } */
+
+/* .filter-test {
+  filter: brightness(0%) saturate(100%);
+  filter: invert(56%) sepia(98%) saturate(5779%) hue-rotate(331deg) brightness(105%) contrast(91%);
+}
+.filter-test2 {
+  filter: invert(56%) sepia(98%) saturate(5779%) hue-rotate(331deg) brightness(105%) contrast(91%);
+} */

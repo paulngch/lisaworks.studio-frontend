@@ -32,6 +32,9 @@ const Footer = () => {
                 <NavLink to="/pages/contact">Request</NavLink>
               </button>
               <button className="text-gray-700 w-1/2 text-left py-2">
+                <NavLink to="/pages/configurator">Configurator</NavLink>
+              </button>
+              <button className="text-gray-700 w-1/2 text-left py-2">
                 <NavLink to="/pages/charity">News</NavLink>
               </button>
             </div>
