@@ -9,16 +9,16 @@ const Configurator = () => {
       <div>Configurator</div>
       <div className=" relative w-[50%]">
         <div className="absolute">
-          <BlackParacord fill="#FEF08A" />
+          <BlackParacord fill="#9D174D" />
         </div>
         <div className="absolute">
-          <PurpleParacord fill="#E11D48" />
+          <PurpleParacord fill="#F43F5E" />
         </div>
         <div className="absolute">
-          <OliveParacord fill="#3B82F6" />
+          <OliveParacord fill="#F43F5E" />
         </div>
         <div className="absolute">
-          <NavyParacord fill="#27272A" />
+          <NavyParacord fill="#9D174D" />
         </div>
         {/* <img className="h-8 w-auto" src="/LisaWorksLogoFilledIn.png" alt="" /> */}
       </div>
