@@ -4,24 +4,3 @@
   padding: 0rem;
   text-align: center;
 } */
-
-.startAsBlack {
-  filter: brightness(0%) saturate(100%);
-}
-
-.filter-black {
-  filter: brightness(0%) saturate(100%);
-}
-.filter-blue {
-  filter: invert(12%) sepia(61%) saturate(4659%) hue-rotate(353deg)
-    brightness(101%) contrast(88%);
-}
-.filter-green {
-  filter: brightness(0%) saturate(100%);
-}
-.filter-pink {
-  filter: brightness(0%) saturate(100%);
-}
-/* .filter-test2 {
-  filter: invert(56%) sepia(98%) saturate(5779%) hue-rotate(331deg) brightness(105%) contrast(91%);
-} */

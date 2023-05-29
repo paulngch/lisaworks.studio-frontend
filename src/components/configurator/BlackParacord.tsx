@@ -26,6 +26,7 @@ const BlackParacord:React.FC<{fill:string}> = ({fill}) => (
         fillRule: "evenodd",
       }}
     />
+    
   </svg>
 );
 export default BlackParacord;
