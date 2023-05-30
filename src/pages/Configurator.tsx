@@ -1,8 +1,3 @@
-// import BlackParacord from "../components/configurator/BlackParacord.tsx";
-// import NavyParacord from "../components/configurator/NavyParacord.tsx";
-// import OliveParacord from "../components/configurator/OliveParacord.tsx";
-// import PurpleParacord from "../components/configurator/PurpleParacord.tsx";
-// import FullParacord from "../components/configurator/FullParacord.tsx";
 import { useState, useEffect } from "react";
 import { HexColorPicker, HexColorInput } from "react-colorful";
 import { RadioGroup } from "@headlessui/react";
@@ -39,12 +34,6 @@ const braid = {
     { name: "3-15", sequence: 3231 },
     //
     { name: "4-1", sequence: 1234 },
-  ],
-  details: [
-    "Only the best materials",
-    "Ethically and locally made",
-    "Pre-washed and pre-shrunk",
-    "Machine wash cold with similar colors",
   ],
 };
 
@@ -127,10 +116,18 @@ const Configurator = () => {
             <div className="">
               <h2 className="text-sm font-medium text-gray-900">Directions</h2>
 
-              <div className="prose prose-sm mt-4 text-gray-500">
-                Select a color and paste the HEX code into the input fields.
+              <div className="prose prose-sm mt-0 text-gray-500">
+                Select up to 4 colors or key in the HEX codes into the input
+                fields.
                 <br />
-                Rearrange them to get different patterns!
+                Check out the combinations for different patterns!
+                <br />
+                <br />
+                Combinations are in the format of X-Y.
+                <br />
+                X: Number of colors used, starting from Color 1 to Color 4
+                <br />
+                Y: The pattern variation, starting from 1
               </div>
             </div>
             <form>
@@ -147,6 +144,7 @@ const Configurator = () => {
                       onChange={setTempColorOne}
                     />
                     <HexColorInput
+                      className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       color={tempColorOne}
                       onChange={setTempColorOne}
                       placeholder="Choose a color"
@@ -161,6 +159,7 @@ const Configurator = () => {
                       onChange={setTempColorTwo}
                     />
                     <HexColorInput
+                      className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       color={tempColorTwo}
                       onChange={setTempColorTwo}
                       placeholder="Choose a color"
@@ -175,6 +174,7 @@ const Configurator = () => {
                       onChange={setTempColorThree}
                     />
                     <HexColorInput
+                      className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       color={tempColorThree}
                       onChange={setTempColorThree}
                       placeholder="Choose a color"
@@ -189,6 +189,7 @@ const Configurator = () => {
                       onChange={setTempColorFour}
                     />
                     <HexColorInput
+                      className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       color={tempColorFour}
                       onChange={setTempColorFour}
                       placeholder="Choose a color"
