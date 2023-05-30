@@ -5,6 +5,7 @@ import SharedLayout from "./pages/SharedLayout.js";
 import Album from "./pages/Album.js";
 import Contact from "./pages/Contact.js";
 import Configurator from "./pages/Configurator.tsx";
+import News from "./pages/News.tsx";
 
 function App() {
   //Prevents ALL Right-clicks on the site to prevent right-click saving of images
@@ -26,11 +27,12 @@ function App() {
             <Route path="/pages/album" element={<Album />} />
             <Route path="/pages/contact" element={<Contact />} />
             <Route path="/pages/configurator" element={<Configurator />} />
+            <Route path="/pages/news" element={<News />} />
           </Route>
         </Routes>
       </BrowserRouter>
     </>
   );
 }
-
+ <br/>
 export default App;

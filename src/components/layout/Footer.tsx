@@ -1,12 +1,20 @@
-import { Link as NavLink } from "react-router-dom";
+const navigation = [
+  { name: "Home", href: "/", id: 1 },
+  { name: "Album", href: "/pages/album", id: 2 },
+  { name: "Requests", href: "/pages/contact", id: 3 },
+  { name: "Configurator", href: "/pages/configurator", id: 4 },
+  { name: "News", href: "/pages/news", id: 5 },
+];
 
 const Footer = () => {
   return (
     <>
       <div className="flex flex-col pt-4 mt-10 mb-40">
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <hr className=" w-[80%] h-0.5 my-8 bg-gray-300 border-0 rounded dark:bg-gray-700" />
-        </div>
+        </div> */}
+        {/* Separation Line */}
+        <div className="grid items-center border-b border-t border-gray-200"></div>
 
         <div className="footerContainer flex items-start justify-evenly">
           <div className="footerLeft flex flex-col p-2 ">
@@ -18,28 +26,17 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          {/* <div></div> */}
           <div className="footerCenter pl-32 hidden lg:block ">
             <div className=" text-xl font-semibold pt-2">Useful Links</div>
-            <div>
-              <button className="text-gray-700 w-1/2 text-left py-2">
-                <NavLink to="/">Home</NavLink>
-              </button>
-              <button className="text-gray-700 w-1/2 text-left py-2">
-                <NavLink to="/pages/album">Album</NavLink>
-              </button>
-              <button className="text-gray-700 w-1/2 text-left py-2">
-                <NavLink to="/pages/contact">Request</NavLink>
-              </button>
-              <button className="text-gray-700 w-1/2 text-left py-2">
-                <NavLink to="/pages/configurator">Configurator</NavLink>
-              </button>
-              <button className="text-gray-700 w-1/2 text-left py-2">
-                <NavLink to="/pages/charity">News</NavLink>
-              </button>
-            </div>
+            {navigation.map((link) => (
+              <div key={link.id} className="text-gray-700 w-1/2 text-left py-2">
+                <a key={link.id} href={link.href} className="0">
+                  {link.name}
+                </a>
+              </div>
+            ))}
           </div>
-          {}
+
           <div className="footerRight p-2 mt-4 ">
             Copyright © 2023. LisaWorks
           </div>

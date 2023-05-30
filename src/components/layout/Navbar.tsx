@@ -7,7 +7,7 @@ const navigation = [
   { name: "Album", href: "/pages/album" },
   { name: "Requests", href: "/pages/contact" },
   { name: "Configurator", href: "/pages/configurator" },
-  { name: "News", href: "#" },
+  { name: "News", href: "/pages/news" },
 ];
 
 const Navbar = () => {

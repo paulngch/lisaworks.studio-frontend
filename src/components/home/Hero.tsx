@@ -29,10 +29,10 @@ const Hero = () => {
                   Request Now
                 </a>
                 <a
-                  href="#"
+                  href="/pages/configurator"
                   className="text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Album <span aria-hidden="true">→</span>
+                  Configurator <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
