@@ -14,7 +14,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
-      <div className=" bg-rose-100 bg-opacity-90 sticky">
+      <div className=" bg-rose-100 bg-opacity-90">
         <header className="absolute inset-x-0 top-0 z-50">
           <nav
             className="flex items-center justify-between p-4 lg:px-8"
