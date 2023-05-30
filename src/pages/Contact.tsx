@@ -181,14 +181,14 @@ export default function Contact() {
                             Change published status
                           </Listbox.Label>
                           <div className="relative">
-                            <div className="inline-flex divide-x divide-indigo-600 rounded-md shadow-sm">
-                              <div className="inline-flex divide-x divide-indigo-600 rounded-md shadow-sm">
-                                <div className="inline-flex items-center rounded-l-md border border-transparent bg-indigo-500 py-2 pl-3 pr-4 text-white shadow-sm">
+                            <div className="inline-flex divide-x divide-pink-600 rounded-md shadow-sm">
+                              <div className="inline-flex divide-x divide-pink-600 rounded-md shadow-sm">
+                                <div className="inline-flex items-center rounded-l-md border border-transparent bg-pink-500 py-2 pl-3 pr-4 text-white shadow-sm">
                                   <p className="ml-2.5 text-sm font-medium">
                                     {selected.title}
                                   </p>
                                 </div>
-                                <Listbox.Button className="inline-flex items-center rounded-l-none rounded-r-md bg-indigo-500 p-2 text-sm font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                                <Listbox.Button className="inline-flex items-center rounded-l-none rounded-r-md bg-pink-500 p-2 text-sm font-medium text-white hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-gray-50">
                                   <span className="sr-only">
                                     Change published status
                                   </span>
@@ -217,7 +217,7 @@ export default function Contact() {
                                     className={({ active }) =>
                                       classNames(
                                         active
-                                          ? "text-white bg-indigo-500"
+                                          ? "text-white bg-pink-500"
                                           : "text-gray-900",
                                         "cursor-default select-none p-4 text-sm"
                                       )
@@ -292,7 +292,7 @@ export default function Contact() {
                     <div>
                       <button
                         type="submit"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-pink-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       >
                         Submit
                       </button>
