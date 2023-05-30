@@ -45,11 +45,15 @@ const Album = () => {
               Album
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">
-              The secret to a gorgeous setup? Not a better keyboard, just get
-              better cables that complements the theme.
+              The secret to a gorgeous setup? A cable that accentuates and
+              complements your keyboard.
               <br />
-              <br />I don't have an official ambum yet, but you can check out my
-              Instagram in the meantime.
+              <br />I don't have an official album yet, but you can check out my
+              <a href="https://www.instagram.com/lisaworks.studio/">
+                {" "}
+                Instagram
+              </a>{" "}
+              in the meantime.
             </p>
           </div>
 

@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div className="footerRight p-2 mt-4 ">
-            Copyright © 2023. LisaWorks
+            Copyright © 2023 LisaWorks
           </div>
         </div>
       </div>
