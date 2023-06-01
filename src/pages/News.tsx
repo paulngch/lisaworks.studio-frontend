@@ -8,14 +8,14 @@ export default function News() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <p className="text-base font-semibold leading-7 text-indigo-600">
+        <p className="text-base font-semibold leading-7 text-pink-600">
           30 May 2023
         </p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           A New Beginning
         </h1>
         <p className="mt-6 text-xl leading-8">
-          Today marks the introduction of the revamped website.
+          - Today marks the introduction of the revamped website.
         </p>
         <p className="mt-2">
           Am extremely excited to present a newly added ghetto cable
@@ -24,13 +24,13 @@ export default function News() {
         </p>
         <div className="mt-5 max-w-2xl">
           <p className="mt-6 text-xl leading-8">
-            On a side note, here are some of the things that I am working on
+            - On a side note, here are some of the things that I am working on
           </p>
 
-          <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
+          <ul role="list" className=" mx-auto mt-8 max-w-xl space-y-8 text-gray-600">
             <li className="flex gap-x-3">
               <CheckCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
                 aria-hidden="true"
               />
               <span>
@@ -43,7 +43,7 @@ export default function News() {
             </li>
             <li className="flex gap-x-3">
               <QuestionMarkCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
                 aria-hidden="true"
               />
               <span>
@@ -57,7 +57,7 @@ export default function News() {
             </li>
             <li className="flex gap-x-3">
               <QuestionMarkCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
                 aria-hidden="true"
               />
               <span>
@@ -93,17 +93,16 @@ export default function News() {
           <figure className="mt-10 border-l border-indigo-600 pl-9">
             <blockquote className="font-semibold text-gray-900">
               <p>
-                “We make a living by what we get. We make a life by what we
-                give.”
+              Ikigai (生き甲斐, lit. 'a reason for being') is a Japanese concept referring to something that gives a person a sense of purpose, a reason for living.
               </p>
             </blockquote>
-            <figcaption className="mt-6 flex gap-x-4">
+            {/* <figcaption className="mt-6 flex gap-x-4">
               <div className="text-sm leading-6">
                 <strong className="font-semibold text-gray-900">
-                  Winston Churchill
+                Ikigai
                 </strong>{" "}
               </div>
-            </figcaption>
+            </figcaption> */}
           </figure>
         </div>
         <figure className="mt-16">
