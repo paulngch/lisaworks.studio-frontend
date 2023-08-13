@@ -7,6 +7,94 @@ import {
 export default function News() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
+      <div className="mx-auto mb-14 max-w-3xl text-base leading-7 text-gray-700">
+        <div className="mt-5 max-w-2xl">
+          <p className="text-base font-semibold leading-7 text-pink-600">
+            14 August 2023
+          </p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Update - Fundraising
+          </h1>
+          <p className="mt-6 text-xl leading-8">
+            - Here are some of the details for an upcoming fundraising effort.
+          </p>
+          <ul
+            role="list"
+            className=" mx-auto mt-8 max-w-xl space-y-8 text-gray-600"
+          >
+            <li className="flex gap-x-3">
+              <CheckCircleIcon
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
+                aria-hidden="true"
+              />
+              <span>
+                <strong className="font-semibold text-gray-900">Date.</strong>{" "}
+                Planned to start on September to commemorate{" "}
+                <span className=" font-extrabold">*redacted*</span> day.
+              </span>
+            </li>
+            <li className="flex gap-x-3">
+              <CheckCircleIcon
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
+                aria-hidden="true"
+              />
+              <span>
+                <strong className="font-semibold text-gray-900">
+                  What's Happening.
+                </strong>{" "}
+                Selling of cables - <span className=" font-bold">ALL</span>{" "}
+                proceeds goes to{" "}
+                <span className=" font-extrabold">*redacted*</span> (charity
+                org) with a donation match by{" "}
+                <span className=" font-extrabold">*redacted*</span>.
+              </span>
+            </li>
+            <li className="flex gap-x-3">
+              <CheckCircleIcon
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
+                aria-hidden="true"
+              />
+              <span>
+                <strong className="font-semibold text-gray-900">Method.</strong>{" "}
+                Multiple ready-stock cables made specifically for this
+                fundraising, to be sold, price to-be-confirmed. <br />
+              </span>
+            </li>
+
+            <li className="flex gap-x-3">
+              <CheckCircleIcon
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
+                aria-hidden="true"
+              />
+              <span>
+                <strong className="font-semibold text-gray-900">
+                  Plan - tentative
+                </strong>{" "}
+                Interested buyers will have to fill up a google form for
+                eventual raffle. Raffle "winners" will be contacted at the end
+                of 2 weeks after announcement and have 24 hours to respond and
+                make payment, else there would be a re-raffle of that cable
+                Final proof of donation will be posted, either here or in
+                Instagram
+              </span>
+            </li>
+
+            <li className="flex gap-x-3">
+              <CheckCircleIcon
+                className="mt-1 h-5 w-5 flex-none text-pink-600"
+                aria-hidden="true"
+              />
+              <span>
+                <strong className="font-semibold text-gray-900">
+                  Conclusion of event.
+                </strong>{" "}
+                Aim to have the whole event end by 30 September. Final proof of
+                donation will be posted, either here or in Instagram
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <p className="text-base font-semibold leading-7 text-pink-600">
           30 May 2023
@@ -27,7 +115,10 @@ export default function News() {
             - On a side note, here are some of the things that I am working on
           </p>
 
-          <ul role="list" className=" mx-auto mt-8 max-w-xl space-y-8 text-gray-600">
+          <ul
+            role="list"
+            className=" mx-auto mt-8 max-w-xl space-y-8 text-gray-600"
+          >
             <li className="flex gap-x-3">
               <CheckCircleIcon
                 className="mt-1 h-5 w-5 flex-none text-pink-600"
@@ -93,7 +184,9 @@ export default function News() {
           <figure className="mt-10 border-l border-indigo-600 pl-9">
             <blockquote className="font-semibold text-gray-900">
               <p>
-              Ikigai (生き甲斐, lit. 'a reason for being') is a Japanese concept referring to something that gives a person a sense of purpose, a reason for living.
+                Ikigai (生き甲斐, lit. 'a reason for being') is a Japanese
+                concept referring to something that gives a person a sense of
+                purpose, a reason for living.
               </p>
             </blockquote>
             {/* <figcaption className="mt-6 flex gap-x-4">
