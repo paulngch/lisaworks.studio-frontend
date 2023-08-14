@@ -5,7 +5,7 @@ https://lisaworks.studio/
 
 <div id="header" align="center">
   <a href="https://lisaworks.studio/">
-    <img src="https://imgur.com/a/7z844uV"/>
+    <img src="https://i.imgur.com/g06MBDi.png"/>
   </a>
 </div>
 
@@ -27,6 +27,7 @@ https://lisaworks.studio/
 </details>
 
 <br>
+
 
 <!-- PROJECT OVERVIEW -->
 
