@@ -141,7 +141,7 @@ const Configurator = () => {
                 placeholder={patternId}
               />
               <button
-                onClick={() => copyPatternCode()}
+                // onClick={() => copyPatternCode()}
                 className="inline-flex justify-center rounded-md border border-transparent bg-pink-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Copy
