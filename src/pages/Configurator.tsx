@@ -73,8 +73,8 @@ const Configurator = () => {
     if (patternCode) {
       const patternCodeToArr = (pattern: string) => {
         let patternArr = pattern.split("_");
-        //If patternCode !== 4 colorCodes + 1 Combination --OR-- if the (4 colorCodes+1combination).length !== 32 (where 4xColorCode + 4UnderScores + 1Combination)
-        if (patternArr.length !== 5 || pattern.length !== 32) {
+        //If patternCode !== 4 colorCodes + 1 Combination + 1 sequence(e.g."secq2-3")
+        if (patternArr.length !== 6) {
           return console.log("Error in ColorCodes or Pattern");
         }
         //Setting State for tempColor(1to4) into param's colorCode
@@ -146,16 +146,27 @@ const Configurator = () => {
         finalParams += patternIdInArray[index] + "_";
       }
       finalParams += patternIdInArray[patternIdInArray.length - 1];
+      //If there is a combination in params, most likely will have unless is 1st load from url, add the corresponding name (e.g. 2-3)
+      if (selectedCombination) {
+        for (let j = 0; j < braid.combination.length; j++) {
+          if (braid.combination[j].sequence === parseInt(selectedCombination)) {
+            finalParams += "_secq" + braid.combination[j].name;
+          }
+        }
+      }
       return finalParams;
     };
     paramsInUrl();
     // console.log(paramsInUrl());
+    // console.log(selectedCombination);
 
     if ("clipboard" in navigator) {
-      await navigator.clipboard.writeText(CONFIGPAGE + "/"+finalParams);
+      await navigator.clipboard.writeText(CONFIGPAGE + "/" + finalParams);
     } else {
-      document.execCommand("copy", true, CONFIGPAGE +"/"+ finalParams);
+      document.execCommand("copy", true, CONFIGPAGE + "/" + finalParams);
     }
+    // console.log(finalParams);
+    // console.log(typeof parseInt(selectedCombination));
   };
 
   return (
