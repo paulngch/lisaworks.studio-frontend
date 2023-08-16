@@ -41,6 +41,12 @@ function classNames(...classes: string[]) {
 }
 
 const Configurator = () => {
+  //Declaring PatternID State for copy/paste
+  const [patternId, setPatternId] = useState("PatternID");
+
+  //Function to copy Pattern Code into clipboard
+  // const copyPatternCode = () => {};
+
   //selectedCombination is initially set as "", but as user selects a combination,
   // i.e "2-1" or "3-14" (key of button), corresponding value (of button, i.e. 1223...1234) gets saved into "selectedCombination" state
   const [selectedCombination, setSelectedCombination] = useState("");
@@ -89,6 +95,14 @@ const Configurator = () => {
     setBraidTwoColor(hexArray[1]);
     setBraidThreeColor(hexArray[2]);
     setBraidFourColor(hexArray[3]);
+
+    setPatternId(
+      tempColorOne +
+        tempColorTwo +
+        tempColorThree +
+        tempColorFour +
+        selectedCombination
+    );
   }, [selectedCombination]);
 
   return (
@@ -113,6 +127,25 @@ const Configurator = () => {
                 fillThree={braidThreeColor}
                 fillFour={braidFourColor}
               />
+            </div>
+            <div className=" flex justify-center">
+              <label htmlFor="full-name" className="sr-only">
+                Pattern ID
+              </label>
+              <input
+                disabled
+                type="text"
+                name="patternId"
+                id="patternId"
+                className="block rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                placeholder={patternId}
+              />
+              <button
+                onClick={() => copyPatternCode()}
+                className="inline-flex justify-center rounded-md border border-transparent bg-pink-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Copy
+              </button>
             </div>
           </div>
 
