@@ -50,12 +50,12 @@ const CableCards = () => {
           {collections.map((collection) => (
             <a
               key={collection.name}
-              href={collection.href}
+              // href={collection.href}
               className="group block"
             >
               <div
                 aria-hidden="true"
-                className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75"
+                className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 "
               >
                 <img
                   src={collection.imageSrc}
