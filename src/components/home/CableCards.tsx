@@ -50,7 +50,6 @@ const CableCards = () => {
           {collections.map((collection) => (
             <a
               key={collection.name}
-              // href={collection.href}
               className="group block"
             >
               <div
