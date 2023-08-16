@@ -6,7 +6,7 @@ import CombinedParacordBraid from "../components/configurator/CombinedParacordBr
 
 const braid = {
   combination: [
-    //1111
+    //sequence example is 1112, where 3X strands of color 1 and 1X stand of color 2
     { name: "1-1", sequence: 1111 },
     //
     { name: "2-1", sequence: 1112 },
@@ -42,8 +42,11 @@ function classNames(...classes: string[]) {
 }
 
 const Configurator = () => {
+  //selectedCombination is initially set as "", but as user selects a combination,
+  // i.e "2-1" or "3-14" (key of button), corresponding value (of button, i.e. 1223...1234) gets saved into "selectedCombination" state
   const [selectedCombination, setSelectedCombination] = useState("");
 
+  //As user selects/inputs the color in the "HEX COLOR PICKER", it gets saved into state, where state will be used to push to hexArray to fill braid/strand color
   const [braidOneColor, setBraidOneColor] = useState("#15803D");
   const [braidTwoColor, setBraidTwoColor] = useState("#100000");
   const [braidThreeColor, setBraidThreeColor] = useState("#100000");
@@ -57,8 +60,13 @@ const Configurator = () => {
   useEffect(() => {
     let hexArray: string[] = [];
 
+    console.log(selectedCombination);
+
+    //Function to populate hexArray into an array with 4 color codes
     const braidSequenceInHex = () => {
+      //Here hexArray will take the state of "selectedCombinaton" (i.e 1221) and convert it into a string for parsing
       let combinationInStr = selectedCombination.toString();
+      //Pushing the corresponding color codes
       for (let i = 0; i < combinationInStr.length; i++) {
         switch (combinationInStr[i]) {
           case "1":
