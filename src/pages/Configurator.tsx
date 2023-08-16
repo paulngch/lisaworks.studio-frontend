@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { HexColorPicker, HexColorInput } from "react-colorful";
 import { RadioGroup } from "@headlessui/react";
-
 import CombinedParacordBraid from "../components/configurator/CombinedParacordBraid.tsx";
 
 const braid = {
@@ -47,20 +46,18 @@ const Configurator = () => {
   const [selectedCombination, setSelectedCombination] = useState("");
 
   //As user selects/inputs the color in the "HEX COLOR PICKER", it gets saved into state, where state will be used to push to hexArray to fill braid/strand color
-  const [braidOneColor, setBraidOneColor] = useState("#15803D");
-  const [braidTwoColor, setBraidTwoColor] = useState("#100000");
-  const [braidThreeColor, setBraidThreeColor] = useState("#100000");
-  const [braidFourColor, setBraidFourColor] = useState("#38BDF8");
+  const [braidOneColor, setBraidOneColor] = useState("");
+  const [braidTwoColor, setBraidTwoColor] = useState("");
+  const [braidThreeColor, setBraidThreeColor] = useState("");
+  const [braidFourColor, setBraidFourColor] = useState("");
 
-  const [tempColorOne, setTempColorOne] = useState("#FDE68A");
-  const [tempColorTwo, setTempColorTwo] = useState("#15803D");
-  const [tempColorThree, setTempColorThree] = useState("#38BDF8");
-  const [tempColorFour, setTempColorFour] = useState("#DB2777");
+  const [tempColorOne, setTempColorOne] = useState("");
+  const [tempColorTwo, setTempColorTwo] = useState("");
+  const [tempColorThree, setTempColorThree] = useState("");
+  const [tempColorFour, setTempColorFour] = useState("");
 
   useEffect(() => {
     let hexArray: string[] = [];
-
-    console.log(selectedCombination);
 
     //Function to populate hexArray into an array with 4 color codes
     const braidSequenceInHex = () => {
