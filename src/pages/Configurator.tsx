@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { HexColorPicker, HexColorInput } from "react-colorful";
 import { RadioGroup } from "@headlessui/react";
 import CombinedParacordBraid from "../components/configurator/CombinedParacordBraid.tsx";
+import { useParams } from "react-router-dom";
+
+const CONFIGPAGE = "https://lisaworks.studio/pages/configurator";
 
 const braid = {
   combination: [
@@ -41,11 +44,11 @@ function classNames(...classes: string[]) {
 }
 
 const Configurator = () => {
+  //Using Params; easier for users to copy and paste code into browser address/url
+  const { patternCode } = useParams();
+
   //Declaring PatternID State for copy/paste
   const [patternId, setPatternId] = useState("PatternID");
-
-  //Function to copy Pattern Code into clipboard
-  // const copyPatternCode = () => {};
 
   //selectedCombination is initially set as "", but as user selects a combination,
   // i.e "2-1" or "3-14" (key of button), corresponding value (of button, i.e. 1223...1234) gets saved into "selectedCombination" state
@@ -61,6 +64,31 @@ const Configurator = () => {
   const [tempColorTwo, setTempColorTwo] = useState("");
   const [tempColorThree, setTempColorThree] = useState("");
   const [tempColorFour, setTempColorFour] = useState("");
+
+  //useEffect so that it only runs once on start, no dependency
+  useEffect(() => {
+    //========Function for manipulating patternCode from address/params to input into HEXColorPicker========
+
+    //If there is params, run function to manipulate for input into HEXColorPicker
+    if (patternCode) {
+      const patternCodeToArr = (pattern: string) => {
+        let patternArr = pattern.split("_");
+        //If patternCode !== 4 colorCodes + 1 Combination --OR-- if the (4 colorCodes+1combination).length !== 32 (where 4xColorCode + 4UnderScores + 1Combination)
+        if (patternArr.length !== 5 || pattern.length !== 32) {
+          return console.log("Error in ColorCodes or Pattern");
+        }
+        //Setting State for tempColor(1to4) into param's colorCode
+        setTempColorOne("#" + patternArr[0]);
+        setTempColorTwo("#" + patternArr[1]);
+        setTempColorThree("#" + patternArr[2]);
+        setTempColorFour("#" + patternArr[3]);
+        //Setting State for combination
+        setSelectedCombination(patternArr[4]);
+      };
+      patternCodeToArr(patternCode);
+    }
+    //======================================================================================================
+  }, []);
 
   useEffect(() => {
     let hexArray: string[] = [];
@@ -101,9 +129,34 @@ const Configurator = () => {
         tempColorTwo +
         tempColorThree +
         tempColorFour +
+        "#" +
         selectedCombination
     );
   }, [selectedCombination]);
+
+  //Function to copy Pattern Code into clipboard
+  const copyPatternCode = async () => {
+    //splitting patternId String into array
+    let patternIdInArray = patternId.split("#");
+    // console.log(patternIdInArray)
+
+    let finalParams = "";
+    const paramsInUrl = () => {
+      for (let index = 1; index < patternIdInArray.length - 1; index++) {
+        finalParams += patternIdInArray[index] + "_";
+      }
+      finalParams += patternIdInArray[patternIdInArray.length - 1];
+      return finalParams;
+    };
+    paramsInUrl();
+    // console.log(paramsInUrl());
+
+    if ("clipboard" in navigator) {
+      await navigator.clipboard.writeText(CONFIGPAGE + "/"+finalParams);
+    } else {
+      document.execCommand("copy", true, CONFIGPAGE +"/"+ finalParams);
+    }
+  };
 
   return (
     <>
@@ -141,10 +194,10 @@ const Configurator = () => {
                 placeholder={patternId}
               />
               <button
-                // onClick={() => copyPatternCode()}
+                onClick={copyPatternCode}
                 className="inline-flex justify-center rounded-md border border-transparent bg-pink-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Copy
+                Copy URL
               </button>
             </div>
           </div>

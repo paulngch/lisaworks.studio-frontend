@@ -27,6 +27,8 @@ function App() {
             <Route path="/pages/album" element={<Album />} />
             <Route path="/pages/contact" element={<Contact />} />
             <Route path="/pages/configurator" element={<Configurator />} />
+            <Route path="/pages/configurator/:patternCode" element={<Configurator />} />
+
             <Route path="/pages/news" element={<News />} />
           </Route>
         </Routes>
